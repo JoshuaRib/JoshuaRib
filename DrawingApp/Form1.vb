@@ -11,7 +11,9 @@
     End Sub
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
-            Dim l As New Line(PictureBox1.Image, m_Previous, e.Location)
+            Dim l As New myrect(PictureBox1.Image, m_Previous, e.Location)
+            l.w = TrackBar2.Value
+            l.h = TrackBar3.Value
             l.Pen = New Pen(c, w)
             m_shapes.Add(l)
             PictureBox1.Invalidate()
@@ -31,7 +33,7 @@
         End If
     End Sub
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
-        For Each s As Line In m_shapes
+        For Each s As Object In m_shapes
             s.Draw()
         Next
     End Sub
