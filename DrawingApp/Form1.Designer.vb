@@ -40,10 +40,26 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar3 = New System.Windows.Forms.TrackBar()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.xspeedtb = New System.Windows.Forms.TrackBar()
+        Me.yspeedtb = New System.Windows.Forms.TrackBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.xspeedtb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.yspeedtb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -171,8 +187,8 @@ Partial Class Form1
         'TrackBar2
         '
         Me.TrackBar2.Location = New System.Drawing.Point(676, 279)
-        Me.TrackBar2.Maximum = 500
-        Me.TrackBar2.Minimum = 10
+        Me.TrackBar2.Maximum = 20
+        Me.TrackBar2.Minimum = 1
         Me.TrackBar2.Name = "TrackBar2"
         Me.TrackBar2.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar2.TabIndex = 14
@@ -181,18 +197,139 @@ Partial Class Form1
         'TrackBar3
         '
         Me.TrackBar3.Location = New System.Drawing.Point(675, 330)
-        Me.TrackBar3.Maximum = 500
-        Me.TrackBar3.Minimum = 10
+        Me.TrackBar3.Maximum = 50
+        Me.TrackBar3.Minimum = 1
         Me.TrackBar3.Name = "TrackBar3"
         Me.TrackBar3.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar3.TabIndex = 15
         Me.TrackBar3.Value = 10
         '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(689, 381)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(75, 23)
+        Me.Button12.TabIndex = 16
+        Me.Button12.Text = "arc"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(689, 409)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(75, 35)
+        Me.Button13.TabIndex = 17
+        Me.Button13.Text = "pie"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(774, 381)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.TabIndex = 18
+        Me.Button14.Text = "rectangle"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(774, 409)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(75, 35)
+        Me.Button15.TabIndex = 19
+        Me.Button15.Text = "solid rectangle"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(720, 191)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(75, 23)
+        Me.Button16.TabIndex = 20
+        Me.Button16.Text = "draw line"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(689, 450)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(75, 33)
+        Me.Button17.TabIndex = 21
+        Me.Button17.Text = "polygon"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(774, 450)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(75, 33)
+        Me.Button18.TabIndex = 22
+        Me.Button18.Text = "circle"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(608, 450)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(75, 33)
+        Me.Button19.TabIndex = 23
+        Me.Button19.Text = "n-gon"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Location = New System.Drawing.Point(808, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(121, 63)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 24
+        Me.PictureBox2.TabStop = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(808, 81)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(121, 38)
+        Me.Button20.TabIndex = 25
+        Me.Button20.Text = "Open Pictures(CLICK PICTURE BOX)"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'xspeedtb
+        '
+        Me.xspeedtb.Location = New System.Drawing.Point(821, 279)
+        Me.xspeedtb.Name = "xspeedtb"
+        Me.xspeedtb.Size = New System.Drawing.Size(104, 45)
+        Me.xspeedtb.TabIndex = 26
+        '
+        'yspeedtb
+        '
+        Me.yspeedtb.Location = New System.Drawing.Point(821, 330)
+        Me.yspeedtb.Name = "yspeedtb"
+        Me.yspeedtb.Size = New System.Drawing.Size(104, 45)
+        Me.yspeedtb.TabIndex = 27
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(861, 487)
+        Me.ClientSize = New System.Drawing.Size(941, 487)
+        Me.Controls.Add(Me.yspeedtb)
+        Me.Controls.Add(Me.xspeedtb)
+        Me.Controls.Add(Me.Button20)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Button19)
+        Me.Controls.Add(Me.Button18)
+        Me.Controls.Add(Me.Button17)
+        Me.Controls.Add(Me.Button16)
+        Me.Controls.Add(Me.Button15)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.TrackBar3)
         Me.Controls.Add(Me.TrackBar2)
         Me.Controls.Add(Me.Button11)
@@ -215,6 +352,9 @@ Partial Class Form1
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.xspeedtb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.yspeedtb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -238,4 +378,17 @@ Partial Class Form1
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents TrackBar2 As TrackBar
     Friend WithEvents TrackBar3 As TrackBar
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Button17 As Button
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Button19 As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button20 As Button
+    Friend WithEvents xspeedtb As TrackBar
+    Friend WithEvents yspeedtb As TrackBar
 End Class

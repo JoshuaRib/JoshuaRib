@@ -1,4 +1,4 @@
-﻿Public Class myrect
+﻿Public Class solidrect
     Public Property Pen As Pen
     Dim m_image As Image
     Dim m_a As Point
@@ -13,7 +13,7 @@
     End Sub
     Public Sub Draw()
         Using g As Graphics = Graphics.FromImage(m_image)
-            g.DrawRectangle(Pen, m_a.X, m_a.Y, 100, 50)
+            g.FillRectangle(New SolidBrush(Pen.Color), m_a.X, m_a.Y, 100, 50)
         End Using
 
     End Sub
