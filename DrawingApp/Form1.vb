@@ -15,13 +15,12 @@
 
             d = New Line(PictureBox1.Image, m_Previous, e.Location)
             d.Pen = New Pen(c, w)
-            d.xspeed = xspeedtb.Value
             If type = "line" Then
-                    d = New Line(PictureBox1.Image, m_Previous, e.Location)
+                d = New Line(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, w)
                 d.xspeed = xspeedtb.Value
             End If
-                If type = "rectangle" Then
+            If type = "rectangle" Then
                     d = New myrect(PictureBox1.Image, m_Previous, e.Location)
                     d.Pen = New Pen(c, w)
                 End If
@@ -66,19 +65,24 @@
         Private Sub pictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
             m_Previous = Nothing
         End Sub
-        Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-            If PictureBox1.Image Is Nothing Then
-                Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
-                Using g As Graphics = Graphics.FromImage(bmp)
-                    g.Clear(Color.White)
-                End Using
-                PictureBox1.Image = bmp
-            End If
-        End Sub
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        clear()
+    End Sub
+    Sub clear()
+        Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
+        Using g As Graphics = Graphics.FromImage(bmp)
+                g.Clear(Color.White)
+            End Using
+            PictureBox1.Image = bmp
+
+    End Sub
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
         For Each s As Object In m_shapes
             s.Draw()
         Next
+        If (CheckBox1.Checked) Then
+            Refresh()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -97,12 +101,8 @@
         End Sub
 
         Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-            Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
-            Using g As Graphics = Graphics.FromImage(bmp)
-                g.Clear(Color.White)
-            End Using
-            PictureBox1.Image = bmp
-        End Sub
+        clear()
+    End Sub
 
         Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
             c = sender.backcolor

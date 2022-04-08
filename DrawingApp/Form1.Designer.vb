@@ -52,14 +52,13 @@ Partial Class Form1
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.xspeedtb = New System.Windows.Forms.TrackBar()
-        Me.yspeedtb = New System.Windows.Forms.TrackBar()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xspeedtb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.yspeedtb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -306,19 +305,22 @@ Partial Class Form1
         Me.xspeedtb.Size = New System.Drawing.Size(104, 45)
         Me.xspeedtb.TabIndex = 26
         '
-        'yspeedtb
+        'CheckBox1
         '
-        Me.yspeedtb.Location = New System.Drawing.Point(821, 330)
-        Me.yspeedtb.Name = "yspeedtb"
-        Me.yspeedtb.Size = New System.Drawing.Size(104, 45)
-        Me.yspeedtb.TabIndex = 27
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(830, 330)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(83, 17)
+        Me.CheckBox1.TabIndex = 27
+        Me.CheckBox1.Text = "Auto refresh"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(941, 487)
-        Me.Controls.Add(Me.yspeedtb)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.xspeedtb)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.PictureBox2)
@@ -354,7 +356,6 @@ Partial Class Form1
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.xspeedtb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.yspeedtb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -390,5 +391,5 @@ Partial Class Form1
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Button20 As Button
     Friend WithEvents xspeedtb As TrackBar
-    Friend WithEvents yspeedtb As TrackBar
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
